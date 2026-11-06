@@ -62,3 +62,8 @@ Registration successful for Faisal
 ## Project Goal
 
 This application will be used to practice an end-to-end CI/CD workflow using Jenkins, SonarQube, Docker, Kubernetes and ArgoCD.
+
+## CI/CD Integration
+
+This project now uses Jenkins for automated Maven builds,
+JUnit testing and artifact generation.
