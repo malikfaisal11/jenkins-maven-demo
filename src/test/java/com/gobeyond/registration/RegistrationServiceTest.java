@@ -9,7 +9,7 @@ class RegistrationServiceTest {
     @Test
     void shouldRegisterValidUser() {
         String result = service.register("Faisal", "faisal@gmail.com");
-        assertEquals("Registration successful for Ahmad", result);
+        assertEquals("Registration successful for Faisal", result);
     }
 
     @Test
