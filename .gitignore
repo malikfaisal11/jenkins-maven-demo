@@ -1,0 +1,9 @@
+# Maven generated files
+target/
+
+# IDE files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
