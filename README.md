@@ -67,3 +67,6 @@ This application will be used to practice an end-to-end CI/CD workflow using Jen
 
 This project now uses Jenkins for automated Maven builds,
 JUnit testing and artifact generation.
+
+echo "" >> README.md
+echo "Docker integration with Jenkins is in progress." >> README.md
