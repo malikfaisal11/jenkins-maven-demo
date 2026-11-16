@@ -32,6 +32,30 @@ pipeline {
             }
         }
 
+        stage('SonarQube Analysis') {
+            steps {
+                echo 'Starting SonarQube code analysis'
+
+                withSonarQubeEnv('SonarQube-Server') {
+                    sh '''
+                        mvn sonar:sonar \
+                            -Dsonar.projectKey=jenkins-maven-demo \
+                            -Dsonar.projectName=jenkins-maven-demo
+                    '''
+                }
+            }
+        }
+
+        stage('Quality Gate') {
+            steps {
+                echo 'Waiting for SonarQube Quality Gate result'
+
+                timeout(time: 10, unit: 'MINUTES') {
+                    waitForQualityGate abortPipeline: true
+                }
+            }
+        }
+
         stage('Package Application') {
             steps {
                 echo 'Packaging Java application'
