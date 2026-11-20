@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: register-app
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: register-app
+  template:
+    metadata:
+      labels:
+        app: register-app
+    spec:
+      containers:
+        - name: register-app
+          image: faisalmalik44/jenkins-maven-demo:latest
+          ports:
+            - containerPort: 8080
+          imagePullPolicy: Always
