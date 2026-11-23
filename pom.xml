@@ -25,10 +25,17 @@
 
     <build>
         <plugins>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.13.0</version>
+                <configuration>
+                    <compilerArgs>
+                        <arg>--add-modules</arg>
+                        <arg>jdk.httpserver</arg>
+                    </compilerArgs>
+                </configuration>
             </plugin>
 
             <plugin>
@@ -36,6 +43,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
             </plugin>
+
         </plugins>
     </build>
 
