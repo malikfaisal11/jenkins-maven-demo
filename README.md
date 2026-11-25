@@ -70,7 +70,3 @@ JUnit testing and artifact generation.
 
 echo "" >> README.md
 echo "Docker integration with Jenkins is in progress." >> README.md
-i have created jenkins file and also pushed it on github
-i have updated the pipeline 
-andother
-updated app file
